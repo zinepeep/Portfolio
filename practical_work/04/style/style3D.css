@@ -1,0 +1,37 @@
+div[class~="box"]{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: silver;
+}
+.original{
+    margin: 25px;
+    float: left;
+    box-shadow: 0 0 20px rgb(119, 119, 119) inset;
+}
+.child{
+    border-radius: 15px;
+    color: #fff;
+    transition: .5s all ease-in-out;
+    background-color: slateblue;
+}
+.box1:hover{
+    transform: translateX(30px);
+}
+.box2:hover{
+    transform: translateY(-30px);
+}
+.box3:hover{
+    /* perspective는 translateZ값이 필수 */
+    transform: perspective(60px) translateZ(15px);
+}
+.box4:hover{transform: rotateX(70deg);}
+.box5:hover{transform: rotateY(40deg);}
+.box6:hover{transform: rotateZ(60deg);}
+.box7:hover{transform: scaleX(1.5);}
+.box8:hover{transform: scaleY(1.2);}
+.box9:hover{transform: scaleZ(1.4);}
+.box10:hover{transform: perspective(500px) scaleZ(5) rotateX(45deg);}

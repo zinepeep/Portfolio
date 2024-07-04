@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform3D_animation</title>
+    <style>
+
+        /* reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* background */
+        .wrap{
+            height: 100vh;
+            background-color: #b1c459;
+        }
+        .brick{
+            height: 70vh;
+            background-image: url(images/brick_pattern.svg);
+            background-size: calc(100% / 5 + 5px);
+            background-position: top;
+            background-attachment: local;
+            background-color: #a25d57;
+            position: relative;
+        }
+        .door_frame{
+            background: url(images/door_frame.svg) no-repeat bottom;
+            position: absolute;
+            width: 20vw;
+            height: 38vw;
+            bottom: -1vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* door */
+        .door{
+            background-image: url(images/door.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 13.7vw;
+            height: 25.7vw;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 1.8vw;
+        }
+        .door:before{
+            /* 고양이 작업해서 넣기 */
+        }
+
+        /* door_handle */
+        .door_handle{
+            width: 2vw;
+            height: 2vw;
+            background: url(images/door_handle.svg) no-repeat;
+            position: absolute;
+            cursor: pointer;
+            bottom: 9.9vw;
+            left: .1vw;
+        }
+        .door_handle:active{
+            transform: rotate(90deg);
+        }
+        .door_handle:hover{
+            animation: shrinkH .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+
+        /* door_front */
+        .door_front{
+            background: url(images/door_front.svg) no-repeat;
+            width: 6.5vw;
+            height: 4.6vw;
+            position: absolute;
+            bottom: 1.98vw;
+            left: 50%;
+            transform: translateX(-50%);
+            transform-origin: top;
+            cursor: pointer;
+        }
+        .door_front:active{
+            transform: translateX(-50%) perspective(70vw) scaleZ(5) scaleY(.5) rotateX(45deg);
+        }
+
+        /* letter */
+        .letter{
+            font-size: 0;
+            cursor: pointer;
+            position: absolute;
+            animation: drop 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+        }
+        .letter>img{
+            width: 3vw;
+        }
+
+        /* keyframes animation */
+        @keyframes drop{
+            0%{
+                bottom: 100vh;
+                left: 0;
+                transform: perspective(70vw) scaleZ(5) scaleY(.5) rotateX(45deg) rotate(0);
+            }
+            30%{
+                bottom: 60vh;
+                left: 10%;
+                transform: perspective(70vw) scaleZ(5) scaleY(.5) rotateX(45deg) rotate(50deg);
+            }
+            40%{
+                bottom: 65vh;
+                left: 8%;
+                transform: perspective(70vw) scaleZ(5) scaleY(.5) rotateX(45deg) rotate(60deg);
+            }
+            60%{
+                bottom: 5vh;
+                left: 45%;
+                transform: translateX(-50%) perspective(70vw) scaleZ(5) scaleY(.5) rotateX(45deg) rotate(10deg);
+            }
+            70%{
+                bottom: 7vh;
+                left: 43%;
+                transform: translateX(-50%) perspective(70vw) scaleZ(5) scaleY(.5) rotateX(45deg) rotate(10deg);
+            }
+            100%{
+                bottom: -.5vw;
+                left: 50%;
+                transform: translateX(-50%) perspective(70vw) scaleZ(5) scaleY(.5) rotateX(45deg) rotate(0);
+            }
+        }
+        @keyframes shrinkH {
+            0%{transform: rotate(0);}
+            33%{transform: rotate(45deg);}
+            50%{transform: rotate(-45deg);}
+            73%{transform: rotate(45deg);}
+            100%{transform: rotate(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="brick">
+            <div class="door_frame">
+                <div class="door">
+                    <div class="door_handle"></div>
+                    <div class="door_front"></div>
+                </div>
+            </div>
+            <div class="letter"><img src="images/letter.svg" alt="letter"><div>
+        </div>
+    </div>
+</body>
+</html>
