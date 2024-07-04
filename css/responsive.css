@@ -1,0 +1,278 @@
+/* DESKTOP_NORMAL */
+@media (max-width: 1920px) {
+    .dozer.outro{
+        bottom: 115%;
+    }
+}
+
+/* NOTEBOOK */
+@media (max-width: 1799px) {
+  html {
+      font-size: 87.5%;
+  }
+
+  .inner {
+      width: 1000px;
+  }
+
+  div[class^="skill_sec"]>img {
+      width: 15vw;
+      min-width: 200px;
+  }
+
+  #portfolio>section {
+      width: calc(100% - 300px);
+  }
+
+  div[class^="slide0"] {
+      max-width: unset;
+      width: 27vw;
+      width: calc(100% / 3 - 10px);
+      min-width: unset;
+  }
+
+  span[class^="thumbnail"] {
+      max-height: unset;
+  }
+
+  .dozer.outro {
+      bottom: 115%;
+  }
+}
+
+/* TABLET - ROW */
+@media (max-width: 1199px) {
+  html {
+      font-size: 75%;
+  }
+
+  section {
+      padding: 10vh 0;
+  }
+
+  .logo {
+      margin: 20px;
+  }
+
+  .inner {
+      width: calc(100vw - 200px);
+  }
+  
+  #portfolio>section {
+      width: calc(100% - 250px);
+  }
+
+  .pf_btn_list {
+      column-gap: 0.25rem;
+  }
+
+  .slick-slide {
+      margin: 0 0.625rem;
+  }
+
+  .dozer.outro {
+      bottom: 105%;
+  }
+
+  .tablet04,
+  .tablet05 {
+      display: none;
+  }
+}
+
+/* ABOUT LAYOUT CHANGE */
+@media (max-width: 1137px) {
+  .about_content {
+      width: calc(100vw - 330px);
+      display: unset;
+      grid-template-columns: unset;
+  }
+
+  .profile {
+      /* error */
+  }
+}
+
+/* TABLET - COLUMN + MOBILE - ROW */
+@media (max-width: 899px) {
+  html {
+      font-size: 59%;
+  }
+
+  h1 {
+      font-size: 3rem;
+      padding: 0 4rem;
+  }
+
+  .loading {
+   height: calc(env(safe-area-inset-bottom) + 100vh); 
+  }
+
+  #intro,
+  #about,
+  #epilogue {
+      height: calc(env(safe-area-inset-bottom) + 100vh);
+  }
+  #portfolio > section{
+      height: calc(env(safe-area-inset-bottom) + 100vh);
+  }
+
+  .inner {
+      width: calc(100vw - 40px);
+  }
+
+  header {
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+  }
+
+  .logo {
+      margin: auto;
+      height: 50px;
+      width: 100%;
+      padding-top: calc(env(safe-area-inset-top) + 7.5px);
+  }
+
+  .logo img {
+      height: 35px;
+
+  }
+
+  nav {
+      right: unset;
+      top: unset;
+      transform: translate(0);
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      bottom: 0;
+  }
+
+  nav ul {
+      flex-direction: row;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: calc(env(safe-area-inset-bottom) + 50px);
+      padding-top: 10px;
+      column-gap: 5px;
+  }
+
+  nav li {
+      flex: auto;
+      width: 5px;
+      height: 5px;
+      border-radius: 5px;
+  }
+
+  nav li.on {
+      height: 5px;
+  }
+
+  nav li span {
+      opacity: 1;
+      visibility: visible;
+      width: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      padding-top: 10px;
+      color: #112152;
+      margin-left: 0;
+      text-align: center;
+  }
+
+  .intro_ment b em {
+      font-size: 4rem;
+      display: block;
+  }
+
+  .scroll_txt{
+      top: 78vh;
+  }
+
+  .scroll_down{
+      top: 80vh;
+  }
+
+  #portfolio>section {
+        width: 100%;
+  }
+
+  #epilogue {
+        height: calc(env(safe-area-inset-bottom) + 120vh);
+  }
+
+  .ep_ment {
+        padding: 5rem 0;
+  }
+}
+
+/* MOBILE - COLUMN */
+@media (max-width: 599px) {
+  .intro_ment b {
+      font-size: 3.127rem;
+  }
+
+  .about_content {
+      width: calc(100vw - 100px);
+  }
+
+  .skill_list {
+      display: grid;
+      gap: 150px;
+      height: initial;
+      width: 100%;
+  }
+
+  div[class^="skill_sec"]>img {
+      width: 40vw;
+      min-width: 187px;
+  }
+
+  div[class^="skill_sec"] {
+      position: unset;
+  }
+
+  div[class^="line0"] {
+      display: none;
+  }
+
+  .tooltip {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  .skill_txt {
+      display: none;
+  }
+
+  span[class^="thumbnail"] {
+      height: 45vh;
+  }
+
+  .pc01,
+  .pc02,
+  .pc03,
+  .pc04,
+  .pc05 {
+      display: none;
+  }
+
+  .ep_ment h1 {
+      padding: 0 6rem;
+  }
+
+  .contect {
+      height: calc(100vh - 26rem);
+  }
+
+  .email b {
+      font-size: 4rem;
+  }
+
+  footer {
+      bottom: calc(env(safe-area-inset-bottom) + 80px);
+  }
+}
