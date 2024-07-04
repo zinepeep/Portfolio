@@ -94,17 +94,17 @@ $(document).ready(function () {
       $(this).hasClass('mobile02')
     ) {
       $('.webdesign-m_modal_url').html('sungsimdangmall.co.kr');
-      $('.webdesign-m_modal_iframe').attr('src', 'portfolio/website_work/02/01_html/index.html');
+      $('.webdesign-m_modal_iframe').attr('src', 'website_work/02/01_html/index.html');
     } else if (
       $(this).hasClass('mobile03')
     ) {
       $('.webdesign-m_modal_url').html('peanuts.com');
-      $('.webdesign-m_modal_iframe').attr('src', 'portfolio/website_work/03/index.html');
+      $('.webdesign-m_modal_iframe').attr('src', 'website_work/03/index.html');
     } else if (
       $(this).hasClass('mobile04')
     ) {
       $('.webdesign-m_modal_url').html('kiet.re.kr');
-      $('.webdesign-m_modal_iframe').attr('src', 'portfolio/website_work/04/index.html');
+      $('.webdesign-m_modal_iframe').attr('src', 'website_work/04/index.html');
     } else if (
       $(this).hasClass('mobile05')
     ) {
@@ -122,23 +122,23 @@ $(document).ready(function () {
     if (
       $(this).hasClass('goToSee01')
     ) {
-      $('.see_modal_iframe').attr('src', 'portfolio/practical_work/01/index.html');
+      $('.see_modal_iframe').attr('src', 'practical_work/01/index.html');
     } else if (
       $(this).hasClass('goToSee02')
     ) {
-      $('.see_modal_iframe').attr('src', 'portfolio/practical_work/02/index.html');
+      $('.see_modal_iframe').attr('src', 'practical_work/02/index.html');
     } else if (
       $(this).hasClass('goToSee03')
     ) {
-      $('.see_modal_iframe').attr('src', 'portfolio/practical_work/03/index.html');
+      $('.see_modal_iframe').attr('src', 'practical_work/03/index.html');
     } else if (
       $(this).hasClass('goToSee04')
     ) {
-      $('.see_modal_iframe').attr('src', 'portfolio/practical_work/04/index.html');
+      $('.see_modal_iframe').attr('src', 'practical_work/04/index.html');
     } else if (
       $(this).hasClass('goToSee05')
     ) {
-      $('.see_modal_iframe').attr('src', 'portfolio/practical_work/05/index.html');
+      $('.see_modal_iframe').attr('src', 'practical_work/05/index.html');
     }
     setTimeout(function () {
       $('.see_modal_iframe').fadeIn(200)
